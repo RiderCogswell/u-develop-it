@@ -1,5 +1,5 @@
-insert into candidates (first_name, last_name, industry_connected)
-values
+INSERT INTO candidates (first_name, last_name, industry_connected)
+VALUES
   ('Ronald', 'Firbank', 1),
   ('Virginia', 'Woolf', 1),
   ('Piers', 'Gaveston', 0),
@@ -10,4 +10,3 @@ values
   ('Montague', 'Summers', 1),
   ('Octavia', 'Butler', 1),
   ('Unica', 'Zurn', 1);
-  
