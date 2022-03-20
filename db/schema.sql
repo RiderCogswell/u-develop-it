@@ -9,11 +9,20 @@ CREATE TABLE parties (
 );
 
 CREATE TABLE candidates (
-    id INTEGER auto_increment PRIMARY KEY,
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     party_id INTEGER,
     industry_connected BOOLEAN NOT NULL,
     -- SETS FOREIGN KEY ***** MUST BE BELOW THE RELIED UPON TABLE (IN THIS CASE parties)
     CONSTRAINT fk_party FOREIGN KEY (party_id) REFERENCES parties(id) ON DELETE SET NULL
+);
+
+CREATE TABLE voters (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+    -- specifies that the default value is if none is entered
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
