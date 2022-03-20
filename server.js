@@ -9,7 +9,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// Use apiRoutes
+// Use apiRoutes -- makes the routes in apiRoutes begin with /api/blank
 app.use('/api', apiRoutes);
 
 // Default response for any other request (Not Found) * catchall *
